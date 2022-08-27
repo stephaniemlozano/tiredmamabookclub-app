@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './assets/styles.css'
+import Header from './components/Header.js';
+import Home from './pages/Home.js'
+import Footer from './components/Footer.js'
+import MyImage from './images/tiredmamalogo.jpeg' 
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <h1>tired mama book club</h1>
+      <h4>we're all tired here.</h4>
+      <img src={MyImage} alt="tired mama logo" />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='*' element={<h1>Oops! Invalid page entry.</h1>} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+    
   );
 }
 
