@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
+import { Navbar, Container, Nav } from 'react-bootstrap'
 
 const Header = () => {
   return (
@@ -14,12 +14,8 @@ const Header = () => {
           <Nav className="me-auto">
             <Nav.Link href="/">home</Nav.Link>
             <Nav.Link href="/about-us">about us</Nav.Link>
-            <NavDropdown title="books and reviews" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/books">books</NavDropdown.Item>
-              <NavDropdown.Item href="/reviews">reviews</NavDropdown.Item>
-              <NavDropdown.Divider />
-            </NavDropdown>
-            <Nav.Link href="/contact">contact</Nav.Link>
+            <Nav.Link href="/books-reviews">books and reviews</Nav.Link>
+            <Nav.Link href="/contact-us">contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

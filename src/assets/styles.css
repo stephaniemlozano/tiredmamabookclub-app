@@ -7,8 +7,28 @@
   padding: 0;
   box-sizing: inherit;
   font-family: 'Concert One', cursive;
+  text-align: center;
+  background-color: #fcf1e8ef;
+  color: rgba(37, 33, 33, 0.735);
 }
 
 
-/*  HEADER.JS styles  */
+/*  Home  */
 
+.carousel-inner {
+  height: 600px;
+  width: 400px;
+  bottom: auto;
+}
+
+.carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+  padding-top: 25px;
+}
+
+img {
+  width: 50%;
+  margin: auto;
+}
