@@ -15,6 +15,10 @@
 
 /*  Home  */
 
+.carousel-item {
+ margin: auto;
+}
+
 .carousel-inner {
   height: 600px;
   width: 400px;
@@ -28,3 +32,24 @@
   padding-top: 25px;
 }
 
+
+/*  BookReviews  */
+
+.all-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.each-card {
+  margin: 15px;
+}
+
+.each-card:hover {
+  box-shadow: 3px 8px 16px 3px rgba(37, 33, 33, 0.735);
+  cursor: pointer;
+}
+
+.card-button:hover {
+  box-shadow: 3px 8px 16px 3px rgba(37, 33, 33, 0.735);
+}

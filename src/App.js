@@ -6,7 +6,7 @@ import Footer from './components/Footer.js'
 import myLogo from './images/tiredmamalogo.jpeg' 
 import AboutUs from './pages/AboutUs';
 import BookReviews from './pages/BookReviews';
-import ContactUs from './pages/ContactUs';
+import EachCard from './pages/EachCard';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/books-reviews' element={<BookReviews /> } />
-        <Route path='/contact-us' element={<ContactUs /> } />
+        <Route path='/review' element={<EachCard />}/>
         <Route path='*' element={<h1>Oops! Invalid page entry.</h1>} />
       </Routes>
       <br />

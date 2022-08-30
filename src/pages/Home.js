@@ -1,8 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel'
 
-
 const Home = () => {
-
   return (
     <div className='carousel'>
       <h1>tired mama book club</h1>
@@ -11,7 +9,7 @@ const Home = () => {
         a time.
       </p>
       <Carousel>
-      <Carousel.Item>
+      <Carousel.Item className='carousel-item'>
         <img
           className="d-block w-100"
           src="https://cdn.shopify.com/s/files/1/0559/3658/1686/products/1655500476_luvbooks_580x.jpg?v=1655501450"
@@ -22,7 +20,7 @@ const Home = () => {
           <p>One of our T O P recommendations if you like a fun, easy read! Check out the review on the Books and Reviews page!</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='carousel-item'>
         <img
           className="d-block w-100"
           src="https://media.istockphoto.com/vectors/join-us-invitation-lettering-isolated-on-white-vector-id812936342?k=20&m=812936342&s=170667a&w=0&h=KyfSMwlb5Qrc0EhKJrVewLEDPwurANy0zSjuB2QTaIU="
@@ -36,7 +34,7 @@ const Home = () => {
           <p>Visit our About Us page to learn more!</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='carousel-item'>
         <img
           className="d-block w-100"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrbLOq_WxAmDvFWrnkK-gDegbAwRChluGqtfy6Ubi_XvHafECoXW1x0X_33ataDCGXxLo&usqp=CAU"
