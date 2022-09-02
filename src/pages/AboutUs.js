@@ -1,8 +1,10 @@
+//import myImage from './src/images/sisters'
+
 const AboutUs = () => {
   return (
-    <div>
+    <div className="container-aboutus">
       <h1>Welcome to tired mama book club!</h1>
-        <img src={"./src/images/sisters.JPG"} alt="sisters" />
+        <img className="container-img" src='https://i.imgur.com/9gn1ZZb.jpeg' alt="sisters" width={300}/>
         <p>
           Hey! We're Carolina and Stephanie! We're sisters (we know, we look
           nothing alike!) and also mamas to 3 crazies 5 and under, collectively.
