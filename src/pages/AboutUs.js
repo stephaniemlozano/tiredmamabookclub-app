@@ -1,5 +1,3 @@
-//import myImage from './src/images/sisters'
-
 const AboutUs = () => {
   return (
     <div className="container-aboutus">

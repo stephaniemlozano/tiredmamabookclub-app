@@ -5,6 +5,8 @@ import { useState } from 'react'
 const Admin = () => {
   const [form, setForm] = useState({})
   const navigate = useNavigate()
+  //const location = useLocation()
+  //const { title } = location.state
 
   const addForm = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value })
@@ -13,7 +15,7 @@ const Admin = () => {
   const addReview = (event) => {
     event.preventDefault()
 
-    fetch('http://localhost:4002/', {
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -30,7 +32,7 @@ const Admin = () => {
   const updateReview = (event) => {
     event.preventDefault()
 
-    fetch('http://localhost:4002/', {
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +48,7 @@ const Admin = () => {
 
   const deleteReview = (event) => {
     event.preventDefault()
-    fetch('http://localhost:4002/', {
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

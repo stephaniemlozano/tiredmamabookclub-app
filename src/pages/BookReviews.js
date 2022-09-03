@@ -7,7 +7,7 @@ const BookReviews = () => {
   const navigate = useNavigate('')
 
   useEffect(() => {
-    fetch('http://localhost:4002/')
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}`)
       .then((response) => response.json())
       .then((data) => setBook(data))
       .catch((error) => console.error(error))
@@ -23,7 +23,7 @@ const BookReviews = () => {
         return (
           <Link state={eachBook} to='/review'>
             <Card key={index} className='each-card' style={{ width: '18rem' }}>
-              <Card.Img variant='top' src='https://picsum.photos/200/' />
+              <Card.Img variant='top' src={eachBook.image} />
               <Card.Body>
                 <Card.Title>
                   <h2>{eachBook.title}</h2>
