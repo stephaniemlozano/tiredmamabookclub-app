@@ -8,7 +8,7 @@ const EachCard = () => {
   return (
     <div className='container'>
       <div className='review'>
-        <img src={image} alt='' />
+        <img src={image} alt=''/>
         <h1>Title: {title}</h1>
         <h3>By: {author}</h3>
         <p>Rating: {rating}</p>

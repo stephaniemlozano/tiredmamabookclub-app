@@ -5,11 +5,11 @@ import { useState } from 'react'
 const Admin = () => {
   const [form, setForm] = useState({})
   const navigate = useNavigate()
-  //const location = useLocation()
-  //const { title } = location.state
+  const { title } = form
 
   const addForm = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value })
+    console.log(event.target.name)
   }
 
   const addReview = (event) => {
@@ -32,7 +32,7 @@ const Admin = () => {
   const updateReview = (event) => {
     event.preventDefault()
 
-    fetch(`${process.env.REACT_APP_API_ENDPOINT}`, {
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}?title=${title}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -48,15 +48,17 @@ const Admin = () => {
 
   const deleteReview = (event) => {
     event.preventDefault()
-    fetch(`${process.env.REACT_APP_API_ENDPOINT}`, {
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}?title=${title}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
       },
     })
       .then((response) => response.json())
-      .then((data) => navigate('/books-reviews'))
+      .then((data) => setForm(data))
       .catch((error) => console.error(error))
+
+      navigate('/books-reviews')
   }
 
   return (
@@ -99,6 +101,14 @@ const Admin = () => {
                 placeholder='ex: True Crime'
                 name='genre'
                 id='genre'
+              />
+              <label htmlFor=''>Image: </label>
+              <input
+                onChange={(event) => addForm(event)}
+                type='text'
+                placeholder='ex: image url'
+                name='image'
+                id='image'
               />
               <button onClick={addReview}>Add Review</button>
             </form>
@@ -148,6 +158,14 @@ const Admin = () => {
                 placeholder='ex: True Crime'
                 name='genre'
                 id='genre'
+              />
+              <label htmlFor=''>Image: </label>
+              <input
+                onChange={(event) => addForm(event)}
+                type='text'
+                placeholder='ex: image url'
+                name='image'
+                id='image'
               />
               <button onClick={updateReview}>Update Review</button>
               <button onClick={deleteReview}>Delete Review</button>
