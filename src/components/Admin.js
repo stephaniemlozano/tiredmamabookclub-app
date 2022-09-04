@@ -68,6 +68,10 @@ const Admin = () => {
           <Card.Body>
             <Card.Title>
               <h2>Add a Book Review!</h2>
+              <small>
+                Enter the information of the book you want to add
+                below.
+              </small>
             </Card.Title>
             <form className='add-review'>
               <label htmlFor=''>Book Title: </label>
@@ -109,6 +113,14 @@ const Admin = () => {
                 placeholder='ex: image url'
                 name='image'
                 id='image'
+              />
+              <label htmlFor=''>Review: </label>
+              <input
+                onChange={(event) => addForm(event)}
+                type='text'
+                placeholder='ex: loved it!'
+                name='review'
+                id='review'
               />
               <button onClick={addReview}>Add Review</button>
             </form>
@@ -121,12 +133,10 @@ const Admin = () => {
             <Card.Title>
               <h2>Update or Edit Book Review</h2>
               <small>
-                Enter the information of the book you want to update or delete
-                below.
+                Enter the information of the book you want to update or delete.
               </small>
             </Card.Title>
             <form className='add-review'>
-              <p>Edit a Review!</p>
               <label htmlFor=''>Book Title: </label>
               <input
                 onChange={(event) => addForm(event)}
@@ -166,6 +176,14 @@ const Admin = () => {
                 placeholder='ex: image url'
                 name='image'
                 id='image'
+              />
+              <label htmlFor=''>Review: </label>
+              <input
+                onChange={(event) => addForm(event)}
+                type='text'
+                placeholder='ex: loved it!'
+                name='review'
+                id='review'
               />
               <button onClick={updateReview}>Update Review</button>
               <button onClick={deleteReview}>Delete Review</button>
