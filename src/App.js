@@ -3,7 +3,7 @@ import './assets/styles.css'
 import Header from './components/Header.js';
 import Home from './pages/Home.js'
 import Footer from './components/Footer.js'
-import myLogo from './images/tiredmamalogo.jpeg' 
+import myLogo from './images/tiredmamalogo.jpg' 
 import AboutUs from './pages/AboutUs';
 import BookReviews from './pages/BookReviews';
 import EachCard from './pages/EachCard';
