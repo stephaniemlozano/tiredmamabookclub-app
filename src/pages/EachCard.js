@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
 
 const EachCard = () => {
@@ -14,6 +14,7 @@ const EachCard = () => {
         <p>Rating: {rating},  Genre: {genre}</p>
         <p>Review: {review}</p>
       </div>
+      <Link state={location.state} to='/admin' className='link-color'>...</Link>
     </div>
   )
 }

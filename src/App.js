@@ -21,7 +21,7 @@ function App() {
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/books-reviews' element={<BookReviews /> } />
         <Route path='/review' element={<EachCard />}/>
-        <Route path='/admin' element={<Admin />}/>
+        {/* <Route path='/admin' element={<Admin />}/> */}
         <Route path='*' element={<h1>Oops! Invalid page entry.</h1>} />
       </Routes>
       <br />

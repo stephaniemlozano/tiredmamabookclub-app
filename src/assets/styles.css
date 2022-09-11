@@ -16,6 +16,10 @@
 .admin-cards {
   display: flex;
   justify-content: space-around;
+  width: 300px;
+  height: 400px;
+  margin: 20px auto 40px auto;
+  
 }
 
 .admin-cards button {
@@ -28,6 +32,20 @@
 .admin-cards button:hover {
   box-shadow: 3px 8px 16px 3px rgba(37, 33, 33, 0.735);
 }
+
+.admin-card {
+  margin: 50px auto 50px auto;
+  width: 750px;
+}
+
+.admin-card:hover {
+  box-shadow: 3px 8px 16px 3px rgba(37, 33, 33, 0.735);
+}
+
+card-body {
+  margin-bottom: 20px;
+}
+
 
 /*  Home  */
 
@@ -48,6 +66,87 @@
 }
 
 /*  AboutUs  */
+.au-card {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+.au-inner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.au-card:hover .au-inner-card {
+  transform: rotateY(180deg);
+}
+
+.au-flip-front, .au-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+.au-flip-front {
+  background-color: peachpuff;
+  color: peachpuff;
+}
+
+.au-flip-back {
+  background-color: peachpuff;
+  color: peachpuff;
+  transform: rotateY(180deg);
+  height: 300px;
+}
+
+.title-word {
+  animation: color-animation 3s linear infinite;
+}
+
+.title-word1 {
+  --color1: #006D77;
+  --color2: #b392ac;
+  --color3: #83c5be;
+}
+
+.title-word2 {
+  --color1: #b392ac;
+  --color2: #e29578;
+  --color3: #735d78;
+}
+
+.title-word3 {
+  --color1: #d8a48f;
+  --color2: #006d77;
+  --color3: #e29578;
+}
+
+.title-word4 {
+  --color1: #b392ac;
+  --color2: #f8ad9d;
+  --color3: #83c5be;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color1)}
+  30%   {color: var(--color1)}
+  35%   {color: var(--color2)}
+  60%   {color: var(--color2)}
+  65%   {color: var(--color3)}
+  95%   {color: var(--color3)}
+  100%  {color: var(--color1)}
+}
 
 
 /*  BookReviews  */
@@ -60,6 +159,8 @@
 
 .each-card {
   margin: 15px;
+  width: 300px;
+  height: 575px;
 }
 
 .each-card:hover {
@@ -70,3 +171,10 @@
 .card-button:hover {
   box-shadow: 3px 8px 16px 3px rgba(37, 33, 33, 0.735);
 }
+
+
+/*  EachCard  */
+.link-color {
+  color: rgba(37, 33, 33, 0.735)
+}
+
