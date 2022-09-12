@@ -54,6 +54,22 @@ const Home = () => {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
+
+        <Carousel.Item className='carousel-item'>
+          <img
+            className='d-block w-100'
+            src='https://i.imgur.com/XxYqbtZ.png'
+            alt='bookstore quote'
+          />
+
+          <Carousel.Caption>
+            <h3>Let's have some F U N</h3>
+            <p>
+              Hidden throughout our website are some secret links to some of our F A V E hole-in-the-wall, locally owned bookshops!
+              Find the links and check them out! Support your local book stores ♥️
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
       </Carousel>
     </div>
   )

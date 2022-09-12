@@ -10,6 +10,7 @@ const Footer = () => {
             <Nav.Link href='/'>home</Nav.Link>
             <Nav.Link href='/about-us'>about us</Nav.Link>
             <Nav.Link href='/books-reviews'>books and reviews</Nav.Link>
+            <Nav.Link href='https://www.facebook.com/BackintheDayBooks'>📖</Nav.Link>
             {/* <Nav.Link href='/admin'>admin</Nav.Link> */}
           </Nav>
         </Container>

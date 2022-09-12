@@ -28,7 +28,7 @@ const AboutUs = () => {
         through a book quickly these days is unheard of. We wanted to make a
         space where all tired moms of young and old can come together and share
         their fave book selections, get recommendations and just be a supportive
-        space overall. Happy mommin! And happy reading 📖!
+        space overall. Happy mommin! And happy reading <a href="https://www.mymamasdania.com/">📖</a>!
       </p>
       <div>
         <h2 className="title">
